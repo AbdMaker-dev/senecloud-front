@@ -14,7 +14,7 @@ class DataService {
   }
 
   updateUser(id, data) {
-    return axios.put(API_URL + 'personnes'+id, data, { headers: hearderService() });
+    return axios.put(API_URL + 'personnes/'+id, data, { headers: hearderService() });
   }
 
   createUser(data) {
@@ -22,8 +22,12 @@ class DataService {
   }
 
   deletUser(id){
-      return axios.delet(API_URL + 'personnes'+id, { headers: hearderService() })
+      return axios.delete(API_URL + 'personnes/'+id, { headers: hearderService() })
   }
+
+  search(search){
+    return axios.get(API_URL + 'personnes/search/'+search, { headers: hearderService() });
+}
 }
 
 export default new DataService();

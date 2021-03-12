@@ -19,7 +19,7 @@ function App() {
            <div className="App container"> 
             <Switch> 
               <Route exact path='/' component={Login}></Route> 
-              <Route exact path='/hom' component={ListUser}></Route> 
+              <Route exact path='/home' component={ListUser}></Route> 
             </Switch> 
           </div> 
     </Router> 

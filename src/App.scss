@@ -1,14 +1,27 @@
 .App{
-        background-color:  #f8f9f9;
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
         border-radius: 10px;
+        background-color: white;
         .form-conteiner{
             margin-top: 25%;
             padding: 80px;
             width: 60%;
             margin-left: auto;
             margin-right: auto;
-        
-        
-    }
+            background-color: white;
+        }
+        .lis-user{
+            width: 100%;
+            margin-top: 20%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            .list{
+                background-color: white;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+            }
+        }
 }

@@ -6,14 +6,14 @@ class AuthService{
 
     login(username, password) {
         return axios
-          .post("https://localhost:3000/api/login", {
+          .post("http://localhost:3000/api/login", {
             username,
             password
           })
           .then(response => {
             if (response.data.accessToken) {
-                console.log(response.data);
-                // localStorage.setItem("user", JSON.stringify(response.data));
+                // console.log(response.data.accessToken);
+                localStorage.setItem("user", JSON.stringify(response.data));
             }
     
             return response.data;
@@ -21,7 +21,7 @@ class AuthService{
     }
 
     logout() {
-        // localStorage.removeItem("user");
+        localStorage.clear();
     }
 
     getCurrentUser() {

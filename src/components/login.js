@@ -2,19 +2,23 @@
 import React from 'react'; 
 import { useState } from 'react';
 import AuthService from '../services/authService';
-  
+import { useHistory } from 'react-router-dom';
+
 function Login (){ 
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
+    const history = useHistory();
 
     const handleSubmit= (e) => {
         e.preventDefault();
 
         AuthService.login(username, password).then(result => {
-            console.log(result);
+            if (result) {
+                history.push('/home');
+            }
         });
         
-        console.log(username);
+        // console.log(username);
     }
 
 

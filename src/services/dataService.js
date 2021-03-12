@@ -6,7 +6,7 @@ const API_URL = 'http://localhost:3000/api/';
 class DataService {
 
   getAllUser() {
-    return axios.get(API_URL + 'personnes');
+    return axios.get(API_URL + 'personnes', { headers: hearderService() });
   }
 
   getUserById(id) {
